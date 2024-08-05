@@ -1,7 +1,7 @@
 {
   "name": "@kilbergr/pg-testing",
   "description": "Postgres testing utilities",
-  "version": "0.1.0-Dev.1",
+  "version": "0.1.0-Dev.2",
   "author": {
     "name": "Kilbergr",
     "email": "ales.albert@kilbergr.eu"
