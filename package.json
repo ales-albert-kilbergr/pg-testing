@@ -1,0 +1,64 @@
+{
+  "name": "@kilbergr/pg-testing",
+  "description": "Postgres testing utilities",
+  "version": "0.1.0-Dev.1",
+  "author": {
+    "name": "Kilbergr",
+    "email": "ales.albert@kilbergr.eu"
+  },
+  "keywords": [
+    "metadata",
+    "typescript"
+  ],
+  "license": "MIT",
+  "url": "https://github.com/ales-albert-kilbergr/pg-testing/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ales-albert-kilbergr/pg-testing.git"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "format": "prettier --write .",
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "build:types": "tsc -p tsconfig.types.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build": "yarn zx .bin/build.mjs",
+    "publish": "yarn test && yarn build && cd ./dist && npm publish --access public && cd .."
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.14.12",
+    "@types/pg": "^8.11.6",
+    "@types/validator": "^13.12.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "jest": "^29.7.0",
+    "jest-mock-extended": "^3.0.7",
+    "jsonwebtoken": "^9.0.2",
+    "prettier": "^3.3.2",
+    "ts-jest": "^29.1.5",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.3",
+    "type-fest": "^4.20.1",
+    "typescript": "^5.5.2",
+    "zx": "^8.1.4"
+  },
+  "packageManager": "yarn@4.4.0",
+  "dependencies": {
+    "@kilbergr/pg-datasource": "^0.1.0-Dev.4",
+    "@kilbergr/pg-sql": "^0.1.0-Dev.9",
+    "@kilbergr/string": "^0.1.0-Dev.1",
+    "@kilbergr/tagged-types": "^0.1.0-Alpha.4",
+    "class-transformer": "^0.5.1",
+    "pg": "^8.12.0",
+    "rxjs": "^7.8.1"
+  }
+}
