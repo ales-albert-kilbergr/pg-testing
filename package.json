@@ -58,6 +58,7 @@
     "@kilbergr/string": "^0.1.0-Dev.1",
     "@kilbergr/tagged-types": "^0.1.0-Alpha.4",
     "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
     "pg": "^8.12.0",
     "rxjs": "^7.8.1"
   }
