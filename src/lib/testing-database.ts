@@ -61,14 +61,6 @@ export class TestingDatabaseConfig {
   })
   public password!: string;
 
-  @IsString({
-    message:
-      'Cannot initialize testing database without a database name. ' +
-      'Check if the POSTGRES_TESTING_DATABASE environment variable is set ' +
-      'or provide a database name in custom configuration.',
-  })
-  public database!: string;
-
   public static createFromEnv(): TestingDatabaseConfig {
     return TestingDatabaseConfig.create({
       host: process.env.POSTGRES_TESTING_HOST!,
@@ -78,7 +70,6 @@ export class TestingDatabaseConfig {
           : Number(process.env.POSTGRES_TESTING_PORT),
       user: process.env.POSTGRES_TESTING_USERNAME!,
       password: process.env.POSTGRES_TESTING_PASSWORD!,
-      database: process.env.POSTGRES_TESTING_DATABASE!,
     });
   }
 

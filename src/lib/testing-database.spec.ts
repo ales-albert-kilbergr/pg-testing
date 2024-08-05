@@ -22,7 +22,6 @@ describe('(Unit) TestingDatabase', () => {
         POSTGRES_TESTING_PORT: '5432',
         POSTGRES_TESTING_USERNAME: 'test',
         POSTGRES_TESTING_PASSWORD: 'test',
-        POSTGRES_TESTING_DATABASE: 'test',
       };
       // Act
       const config = TestingDatabaseConfig.createFromEnv();
@@ -32,7 +31,6 @@ describe('(Unit) TestingDatabase', () => {
       expect(config.port).toBe(Number(process.env.POSTGRES_TESTING_PORT));
       expect(config.user).toBe(process.env.POSTGRES_TESTING_USERNAME);
       expect(config.password).toBe(process.env.POSTGRES_TESTING_PASSWORD);
-      expect(config.database).toBe(process.env.POSTGRES_TESTING_DATABASE);
       // Cleanup
       process.env = origEnv;
     });
@@ -44,7 +42,6 @@ describe('(Unit) TestingDatabase', () => {
         POSTGRES_TESTING_HOST: 'localhost',
         POSTGRES_TESTING_PORT: '5432',
         POSTGRES_TESTING_PASSWORD: 'test',
-        POSTGRES_TESTING_DATABASE: 'test',
       };
       // Act
       const config = TestingDatabaseConfig.createFromEnv();
@@ -71,7 +68,6 @@ describe('(Unit) TestingDatabase', () => {
         POSTGRES_TESTING_HOST: 'localhost',
         POSTGRES_TESTING_PORT: '5432',
         POSTGRES_TESTING_USERNAME: 'test',
-        POSTGRES_TESTING_DATABASE: 'test',
       };
       // Act
       const config = TestingDatabaseConfig.createFromEnv();
@@ -91,33 +87,6 @@ describe('(Unit) TestingDatabase', () => {
       process.env = origEnv;
     });
 
-    it('should fail to validate if POSTGRES_TESTING_DATABASE is not set', () => {
-      // Arrange
-      const origEnv = process.env;
-      process.env = {
-        POSTGRES_TESTING_HOST: 'localhost',
-        POSTGRES_TESTING_PORT: '5432',
-        POSTGRES_TESTING_USERNAME: 'test',
-        POSTGRES_TESTING_PASSWORD: 'test',
-      };
-      // Act
-      const config = TestingDatabaseConfig.createFromEnv();
-      const act = (): void => {
-        config.assert();
-      };
-      // Assert
-      expect(act).toThrow(AggregateError);
-      expect(act).toThrow(
-        expect.objectContaining({
-          message: expect.stringContaining(
-            'Cannot initialize testing database without a database name.',
-          ),
-        }),
-      );
-      // Cleanup
-      process.env = origEnv;
-    });
-
     it('should set the hostname to the default value', () => {
       // Arrange
       const origEnv = process.env;
@@ -125,7 +94,6 @@ describe('(Unit) TestingDatabase', () => {
         POSTGRES_TESTING_PORT: '5432',
         POSTGRES_TESTING_USERNAME: 'test',
         POSTGRES_TESTING_PASSWORD: 'test',
-        POSTGRES_TESTING_DATABASE: 'test',
       };
       // Act
       const config = TestingDatabaseConfig.createFromEnv();
@@ -142,7 +110,6 @@ describe('(Unit) TestingDatabase', () => {
         POSTGRES_TESTING_HOST: 'localhost',
         POSTGRES_TESTING_USERNAME: 'test',
         POSTGRES_TESTING_PASSWORD: 'test',
-        POSTGRES_TESTING_DATABASE: 'test',
       };
       // Act
       const config = TestingDatabaseConfig.createFromEnv();
@@ -163,7 +130,6 @@ describe('(Unit) TestingDatabase', () => {
           POSTGRES_TESTING_PORT: '5432',
           POSTGRES_TESTING_USERNAME: stringRandom(),
           POSTGRES_TESTING_PASSWORD: stringRandom(),
-          POSTGRES_TESTING_DATABASE: stringRandom(),
         };
         // Act
         const database = new TestingDatabase('test');
@@ -185,7 +151,6 @@ describe('(Unit) TestingDatabase', () => {
         process.env = {
           // Missing required field USERNAME
           POSTGRES_TESTING_PASSWORD: 'test',
-          POSTGRES_TESTING_DATABASE: 'test',
         };
         // Act
         const database = new TestingDatabase('test');
@@ -201,7 +166,6 @@ describe('(Unit) TestingDatabase', () => {
         const config = TestingDatabaseConfig.create({
           user: stringRandom(),
           password: stringRandom(),
-          database: stringRandom(),
         });
 
         const mockClient = mock<Client>();
@@ -224,7 +188,6 @@ describe('(Unit) TestingDatabase', () => {
         const config = TestingDatabaseConfig.create({
           user: stringRandom(),
           password: stringRandom(),
-          database: stringRandom(),
         });
 
         const mockClient = mock<Client>();
@@ -252,7 +215,6 @@ describe('(Unit) TestingDatabase', () => {
         const config = TestingDatabaseConfig.create({
           user: stringRandom(),
           password: stringRandom(),
-          database: stringRandom(),
         });
 
         const mockClient = mock<Client>();
@@ -283,7 +245,6 @@ describe('(Unit) TestingDatabase', () => {
         const config = TestingDatabaseConfig.create({
           user: stringRandom(),
           password: stringRandom(),
-          database: stringRandom(),
         });
 
         const mockClient = mock<Client>();
@@ -301,7 +262,6 @@ describe('(Unit) TestingDatabase', () => {
         const config = TestingDatabaseConfig.create({
           user: stringRandom(),
           password: stringRandom(),
-          database: stringRandom(),
         });
 
         const mockClient = mock<Client>();
