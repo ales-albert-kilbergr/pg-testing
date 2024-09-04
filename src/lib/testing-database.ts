@@ -5,7 +5,7 @@ import { mock } from 'jest-mock-extended';
 import {
   Datasource,
   type QueryRunner,
-  type QueryLogger,
+  type TransactionRunner,
 } from '@kilbergr/pg-datasource';
 import { stringRandom } from '@kilbergr/string';
 import { Identifier, sql } from '@kilbergr/pg-sql';
@@ -119,7 +119,9 @@ export class TestingDatabase {
 
   private datasource?: Datasource;
 
-  private readonly loggerMock = mock<QueryLogger>();
+  private readonly loggerMock = mock<
+    QueryRunner.Logger & TransactionRunner.Logger & Datasource.Logger
+  >();
 
   /**
    * @param name is a name for the testing database. The name will be extended
@@ -172,6 +174,7 @@ export class TestingDatabase {
     this.datasource = new Datasource(
       'testingDatasource',
       pool,
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       this.loggerMock,
     );
   }
