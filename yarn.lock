@@ -781,11 +781,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kilbergr/pg-datasource@npm:^0.1.0-Dev.19":
-  version: 0.1.0-Dev.19
-  resolution: "@kilbergr/pg-datasource@npm:0.1.0-Dev.19"
+"@kilbergr/pg-datasource@npm:^0.1.0-Dev.20":
+  version: 0.1.0-Dev.20
+  resolution: "@kilbergr/pg-datasource@npm:0.1.0-Dev.20"
   peerDependencies:
-    "@kilbergr/pg-sql": ^0.1.0-Dev.15
+    "@kilbergr/pg-sql": ^0.1.0-Dev.17
     "@kilbergr/string": ^0.1.0-Dev.1
     "@kilbergr/tagged-types": ^0.1.0-Alpha.3
     class-transformer: ^0.5.1
@@ -793,17 +793,17 @@ __metadata:
     joi: ^17.13.3
     pg: ^8.12.0
     rxjs: ^7.8.1
-  checksum: 10/b501494c25480c5a0d2dcef60b0ccd9bc630f152fe676dc4d462ef2aa271c01060841830f2600d494b754a4d3adaa57675f8d329b236feb3735a1081226f788e
+  checksum: 10/09fedfa5b942e477ded5d7245f8a85c2399607fe49e97ba9b2dba2c3456e70c27942cb74dc95fc2224f7c8c8fc9c83a815a87b7642e297de26bb4f3e98604fa0
   languageName: node
   linkType: hard
 
-"@kilbergr/pg-sql@npm:^0.1.0-Dev.16":
-  version: 0.1.0-Dev.16
-  resolution: "@kilbergr/pg-sql@npm:0.1.0-Dev.16"
+"@kilbergr/pg-sql@npm:^0.1.0-Dev.17":
+  version: 0.1.0-Dev.17
+  resolution: "@kilbergr/pg-sql@npm:0.1.0-Dev.17"
   peerDependencies:
     "@kilbergr/tagged-types": ^0.1.0-Alpha.3
     pg: ^8.12.0
-  checksum: 10/e7bbb81878a428b28649cdc9c95e63268a05a9ce096150b26af7ac3026acc6168fbe29d4449ecfa1934d7aa831f10ea9c0f023bd141e2c88ed5ac94a12d60e7e
+  checksum: 10/47063ac2c9a83ef1af8ba257e415c00aa8379040269e681e9e7f8601b191d83a9f15b4d4fb4058db1390e2aa5998a6354ae61f4695742d1756f5d369c805b927
   languageName: node
   linkType: hard
 
@@ -811,10 +811,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@kilbergr/pg-testing@workspace:."
   dependencies:
-    "@kilbergr/pg-datasource": "npm:^0.1.0-Dev.19"
-    "@kilbergr/pg-sql": "npm:^0.1.0-Dev.16"
+    "@kilbergr/pg-datasource": "npm:^0.1.0-Dev.20"
+    "@kilbergr/pg-sql": "npm:^0.1.0-Dev.17"
     "@kilbergr/string": "npm:^0.1.0-Dev.1"
-    "@kilbergr/tagged-types": "npm:^0.1.0-Alpha.4"
+    "@kilbergr/tagged-types": "npm:^0.1.0-Alpha.5"
     "@types/jest": "npm:^29.5.12"
     "@types/jsonwebtoken": "npm:^9.0.6"
     "@types/node": "npm:^20.14.12"
@@ -851,12 +851,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kilbergr/tagged-types@npm:^0.1.0-Alpha.4":
-  version: 0.1.0-Alpha.4
-  resolution: "@kilbergr/tagged-types@npm:0.1.0-Alpha.4"
+"@kilbergr/tagged-types@npm:^0.1.0-Alpha.5":
+  version: 0.1.0-Alpha.5
+  resolution: "@kilbergr/tagged-types@npm:0.1.0-Alpha.5"
   dependencies:
     validator: "npm:^13.12.0"
-  checksum: 10/11d2e101fa0c824b3cfeb6f7baf13774106c1ba0ebf601a18b082a5d93235bb7b06785f57f793e2c3e29c23a1abfeaba9f0bcda8844a3e59279ef843f2098747
+  checksum: 10/a4bbd9fb5b5b663e3c28f49de6888cce8f35db0a03b10aa07346aa7fbbbea21587d778cba3472a2d925231a507cbc4bdf429cf6e50128e0ec392143700575158
   languageName: node
   linkType: hard
 
