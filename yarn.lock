@@ -781,11 +781,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kilbergr/pg-datasource@npm:^0.1.0-Dev.20":
-  version: 0.1.0-Dev.20
-  resolution: "@kilbergr/pg-datasource@npm:0.1.0-Dev.20"
+"@kilbergr/pg-datasource@npm:^0.1.0-Dev.28":
+  version: 0.1.0-Dev.28
+  resolution: "@kilbergr/pg-datasource@npm:0.1.0-Dev.28"
   peerDependencies:
-    "@kilbergr/pg-sql": ^0.1.0-Dev.17
+    "@kilbergr/pg-sql": ^0.1.0-Dev.19
     "@kilbergr/string": ^0.1.0-Dev.1
     "@kilbergr/tagged-types": ^0.1.0-Alpha.3
     class-transformer: ^0.5.1
@@ -793,17 +793,17 @@ __metadata:
     joi: ^17.13.3
     pg: ^8.12.0
     rxjs: ^7.8.1
-  checksum: 10/09fedfa5b942e477ded5d7245f8a85c2399607fe49e97ba9b2dba2c3456e70c27942cb74dc95fc2224f7c8c8fc9c83a815a87b7642e297de26bb4f3e98604fa0
+  checksum: 10/ee3d206df3ce7ba3ac843da9942d828715a1dd456bbd1246e514a3ea2c5adc4af83f897490a4a3010431d54689493a8a00e5736fea7a575f8ab4e5c2f0cf67c2
   languageName: node
   linkType: hard
 
-"@kilbergr/pg-sql@npm:^0.1.0-Dev.17":
-  version: 0.1.0-Dev.17
-  resolution: "@kilbergr/pg-sql@npm:0.1.0-Dev.17"
+"@kilbergr/pg-sql@npm:^0.1.0-Dev.19":
+  version: 0.1.0-Dev.19
+  resolution: "@kilbergr/pg-sql@npm:0.1.0-Dev.19"
   peerDependencies:
     "@kilbergr/tagged-types": ^0.1.0-Alpha.3
     pg: ^8.12.0
-  checksum: 10/47063ac2c9a83ef1af8ba257e415c00aa8379040269e681e9e7f8601b191d83a9f15b4d4fb4058db1390e2aa5998a6354ae61f4695742d1756f5d369c805b927
+  checksum: 10/8890d06ae919070bf51cee8afe6d112e0bb32b7e2692c15adb8ff9d356759b779186c8bb75186472805944b16bab39f0f9320086fe619b98a4eb507e7cc370ff
   languageName: node
   linkType: hard
 
@@ -811,8 +811,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@kilbergr/pg-testing@workspace:."
   dependencies:
-    "@kilbergr/pg-datasource": "npm:^0.1.0-Dev.20"
-    "@kilbergr/pg-sql": "npm:^0.1.0-Dev.17"
+    "@kilbergr/pg-datasource": "npm:^0.1.0-Dev.28"
+    "@kilbergr/pg-sql": "npm:^0.1.0-Dev.19"
     "@kilbergr/string": "npm:^0.1.0-Dev.1"
     "@kilbergr/tagged-types": "npm:^0.1.0-Alpha.5"
     "@types/jest": "npm:^29.5.12"
