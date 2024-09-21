@@ -781,9 +781,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kilbergr/pg-datasource@npm:^0.1.0-Dev.28":
-  version: 0.1.0-Dev.28
-  resolution: "@kilbergr/pg-datasource@npm:0.1.0-Dev.28"
+"@kilbergr/pg-datasource@npm:^0.1.0-Dev.29":
+  version: 0.1.0-Dev.29
+  resolution: "@kilbergr/pg-datasource@npm:0.1.0-Dev.29"
   peerDependencies:
     "@kilbergr/pg-sql": ^0.1.0-Dev.19
     "@kilbergr/string": ^0.1.0-Dev.1
@@ -793,7 +793,7 @@ __metadata:
     joi: ^17.13.3
     pg: ^8.12.0
     rxjs: ^7.8.1
-  checksum: 10/ee3d206df3ce7ba3ac843da9942d828715a1dd456bbd1246e514a3ea2c5adc4af83f897490a4a3010431d54689493a8a00e5736fea7a575f8ab4e5c2f0cf67c2
+  checksum: 10/a063077df315090a8b4dfe503917dda574af5b01a0179afba6b46e062fb6311ffee76d3d6c29eb3e443fa4033bf249efeaec2ff6ab819accc9db4056dacc9177
   languageName: node
   linkType: hard
 
@@ -811,7 +811,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@kilbergr/pg-testing@workspace:."
   dependencies:
-    "@kilbergr/pg-datasource": "npm:^0.1.0-Dev.28"
+    "@kilbergr/pg-datasource": "npm:^0.1.0-Dev.29"
     "@kilbergr/pg-sql": "npm:^0.1.0-Dev.19"
     "@kilbergr/string": "npm:^0.1.0-Dev.1"
     "@kilbergr/tagged-types": "npm:^0.1.0-Alpha.5"

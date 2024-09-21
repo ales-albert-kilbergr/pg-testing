@@ -53,7 +53,7 @@
   },
   "packageManager": "yarn@4.4.0",
   "dependencies": {
-    "@kilbergr/pg-datasource": "^0.1.0-Dev.28",
+    "@kilbergr/pg-datasource": "^0.1.0-Dev.29",
     "@kilbergr/pg-sql": "^0.1.0-Dev.19",
     "@kilbergr/string": "^0.1.0-Dev.1",
     "@kilbergr/tagged-types": "^0.1.0-Alpha.5",
